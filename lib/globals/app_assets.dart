@@ -12,4 +12,10 @@ class AppAssets {
   static String work1 = 'assets/images/work1.jpg';
   static String work2 = 'assets/images/work2.jpg';
   static String share = 'assets/images/share.png';
+  static String android = 'assets/images/android.png';
+  static String dart = 'assets/images/dart_logo.png';
+  static String flutter = 'assets/images/flutter_logo.png';
+  static String java = 'assets/images/java.webp';
+  static String kotlin = 'assets/images/kotlin.png';
+  static String btn = 'assets/images/btn.png';
 }

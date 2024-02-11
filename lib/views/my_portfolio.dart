@@ -1,3 +1,5 @@
+import 'dart:js' as js;
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/globals/app_assets.dart';
@@ -17,12 +19,21 @@ class _MyPortfolioState extends State<MyPortfolio> {
   final onH0verEffect = Matrix4.identity()..scale(1.0);
 
   List images = <String>[
-    AppAssets.work1,
+    AppAssets.btn,
     AppAssets.work2,
     AppAssets.work1,
     AppAssets.work2,
     AppAssets.work1,
     AppAssets.work2,
+  ];
+
+  List urlGooglePlay = <String>[
+    "https://play.google.com/store/search?q=btn+new+mobile+banking&c=apps&hl=en-ID",
+    "https://play.google.com/store/apps/details?id=id.go.polri.tribratanews&hl=en-ID",
+    "https://play.google.com/store/apps/details?id=com.te.dnpmobile&hl=en-ID",
+    "https://play.google.com/store/search?q=btn+new+mobile+banking&c=apps&hl=en-ID",
+    "https://play.google.com/store/search?q=btn+new+mobile+banking&c=apps&hl=en-ID",
+    "https://play.google.com/store/search?q=btn+new+mobile+banking&c=apps&hl=en-ID",
   ];
 
   var hoveredIndex;
@@ -76,7 +87,9 @@ class _MyPortfolioState extends State<MyPortfolio> {
         return FadeInUpBig(
           duration: const Duration(milliseconds: 1600),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+                js.context.callMethod('open', [urlGooglePlay[index]]);
+            },
             onHover: (value) {
               setState(() {
                 if (value) {
@@ -89,13 +102,14 @@ class _MyPortfolioState extends State<MyPortfolio> {
             child: Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage(image), fit: BoxFit.fill),
-                  ),
-                ),
+                Image.asset(image, fit: BoxFit.fill),
+                // Container(
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(20),
+                //     image: DecorationImage(
+                //         image: AssetImage(image), fit: BoxFit.fill),
+                //   ),
+                // ),
                 Visibility(
                   visible: index == hoveredIndex,
                   child: AnimatedContainer(
@@ -125,7 +139,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                         ),
                         Constants.sizedBox(height: 15.0),
                         Text(
-                          'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                          'I had the opportunity to become one of the Android programmers for the New BTN Mobile Banking project. Work as a team to work on payment and purchase features. where the total menu has been successfully worked on and has released 22 menus for the payment feature and 6 menus for the purchase feature.Development is carried out based on sprints and tasks given by each team leader. Performing UI slicing work from Figma with the UI/UX Designer and coordinating with the BA regarding flow for making navigation, integrating with the BE (Back End) team, and fixing bugs with the help of a QA as a tester. ',
                           style:
                               AppTextStyles.normalStyle(color: Colors.black87),
                           textAlign: TextAlign.center,

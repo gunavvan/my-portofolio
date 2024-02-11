@@ -25,7 +25,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
   final menuItems = <String>[
     'Home',
     'About',
-    'Services',
+    'Skills',
     'Portfolio',
     'Contact',
   ];
