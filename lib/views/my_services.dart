@@ -68,47 +68,6 @@ class _MyServicesState extends State<MyServices> {
                   // color: AppColors.themeColor,
                 ),
                 Constants.sizedBox(width: 24.0),
-                // InkWell(
-                //   onTap: () {},
-                //   onHover: (value) {
-                //     setState(() {
-                //       isApp = value;
-                //     });
-                //   },
-                //   child: buildAnimatedContainer(
-                //     title: 'App Development',
-                //     asset: AppAssets.code,
-                //     hover: isApp,
-                //   ),
-                // ),
-                // Constants.sizedBox(width: 24.0),
-                // InkWell(
-                //   onTap: () {},
-                //   onHover: (value) {
-                //     setState(() {
-                //       isGraphic = value;
-                //     });
-                //   },
-                //   child: buildAnimatedContainer(
-                //     title: 'Graphic Designing',
-                //     asset: AppAssets.brush,
-                //     hover: isGraphic,
-                //   ),
-                // ),
-                // Constants.sizedBox(width: 24.0),
-                // InkWell(
-                //   onTap: () {},
-                //   onHover: (value) {
-                //     setState(() {
-                //       isDataAnalyst = value;
-                //     });
-                //   },
-                //   child: buildAnimatedContainer(
-                //     title: 'Digital Marketing',
-                //     asset: AppAssets.analyst,
-                //     hover: isDataAnalyst,
-                //   ),
-                // )
               ],
             ),
           ),
@@ -119,135 +78,48 @@ class _MyServicesState extends State<MyServices> {
         children: [
           buildMyServicesText(),
           Constants.sizedBox(height: 60.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                AppAssets.android,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.dart,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.flutter,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              // Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.java,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.kotlin,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isApp = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'App Development',
-              //     asset: AppAssets.code,
-              //     hover: isApp,
-              //   ),
-              // ),
-              // Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isGraphic = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'Graphic Designing',
-              //     asset: AppAssets.brush,
-              //     hover: isGraphic,
-              //   ),
-              // ),
-              // Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isDataAnalyst = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'Digital Marketing',
-              //     asset: AppAssets.analyst,
-              //     hover: isDataAnalyst,
-              //   ),
-              // )
-            ],
+          FittedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  AppAssets.android,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.dart,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.flutter,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                // Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.java,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.kotlin,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+              ],
+            ),
           ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     InkWell(
-          //       onTap: () {},
-          //       onHover: (value) {
-          //         setState(() {
-          //           isApp = value;
-          //         });
-          //       },
-          //       child: buildAnimatedContainer(
-          //         title: 'App Development',
-          //         asset: AppAssets.code,
-          //         hover: isApp,
-          //       ),
-          //     ),
-          //     Constants.sizedBox(width: 24.0),
-          //     InkWell(
-          //       onTap: () {},
-          //       onHover: (value) {
-          //         setState(() {
-          //           isGraphic = value;
-          //         });
-          //       },
-          //       child: buildAnimatedContainer(
-          //         title: 'Graphic Designing',
-          //         asset: AppAssets.brush,
-          //         hover: isGraphic,
-          //       ),
-          //     ),
-          //   ],
-          // ),
-          // Constants.sizedBox(height: 26.0),
-          // InkWell(
-          //   onTap: () {},
-          //   onHover: (value) {
-          //     setState(() {
-          //       isDataAnalyst = value;
-          //     });
-          //   },
-          //   child: buildAnimatedContainer(
-          //     title: 'Digital Marketing',
-          //     asset: AppAssets.analyst,
-          //     hover: isDataAnalyst,
-          //     width: 725.0,
-          //     hoverWidth: 735.0,
-          //   ),
-          // )
         ],
       ),
       desktop: Column(
@@ -255,86 +127,47 @@ class _MyServicesState extends State<MyServices> {
         children: [
           buildMyServicesText(),
           Constants.sizedBox(height: 60.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                AppAssets.android,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.dart,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.flutter,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              // Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.java,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              Image.asset(
-                AppAssets.kotlin,
-                width: 150,
-                height: 150,
-                // color: AppColors.themeColor,
-              ),
-              Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isApp = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'App Development',
-              //     asset: AppAssets.code,
-              //     hover: isApp,
-              //   ),
-              // ),
-              // Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isGraphic = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'Graphic Designing',
-              //     asset: AppAssets.brush,
-              //     hover: isGraphic,
-              //   ),
-              // ),
-              // Constants.sizedBox(width: 24.0),
-              // InkWell(
-              //   onTap: () {},
-              //   onHover: (value) {
-              //     setState(() {
-              //       isDataAnalyst = value;
-              //     });
-              //   },
-              //   child: buildAnimatedContainer(
-              //     title: 'Digital Marketing',
-              //     asset: AppAssets.analyst,
-              //     hover: isDataAnalyst,
-              //   ),
-              // )
-            ],
+          FittedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  AppAssets.android,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.dart,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.flutter,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                // Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.java,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+                Image.asset(
+                  AppAssets.kotlin,
+                  width: 150,
+                  height: 150,
+                  // color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(width: 24.0),
+              ],
+            ),
           ),
         ],
       ),

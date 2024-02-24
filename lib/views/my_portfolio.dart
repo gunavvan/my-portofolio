@@ -20,8 +20,8 @@ class _MyPortfolioState extends State<MyPortfolio> {
 
   List images = <String>[
     AppAssets.btn,
-    AppAssets.work2,
-    AppAssets.work1,
+    AppAssets.tribrata,
+    AppAssets.dnp,
     AppAssets.work2,
     AppAssets.work1,
     AppAssets.work2,
@@ -88,7 +88,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
           duration: const Duration(milliseconds: 1600),
           child: InkWell(
             onTap: () {
-                js.context.callMethod('open', [urlGooglePlay[index]]);
+              js.context.callMethod('open', [urlGooglePlay[index]]);
             },
             onHover: (value) {
               setState(() {
@@ -102,7 +102,10 @@ class _MyPortfolioState extends State<MyPortfolio> {
             child: Stack(
               alignment: Alignment.center,
               children: [
-                Image.asset(image, fit: BoxFit.fill),
+                SizedBox(
+                    width: 500,
+                    height: 500,
+                    child: Image.asset(image, fit: BoxFit.fill)),
                 // Container(
                 //   decoration: BoxDecoration(
                 //     borderRadius: BorderRadius.circular(20),
@@ -110,52 +113,55 @@ class _MyPortfolioState extends State<MyPortfolio> {
                 //         image: AssetImage(image), fit: BoxFit.fill),
                 //   ),
                 // ),
-                Visibility(
-                  visible: index == hoveredIndex,
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 600),
-                    transform: index == hoveredIndex ? onH0verEffect : null,
-                    curve: Curves.easeIn,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: LinearGradient(
-                          colors: [
-                            AppColors.themeColor.withOpacity(1.0),
-                            AppColors.themeColor.withOpacity(0.9),
-                            AppColors.themeColor.withOpacity(0.8),
-                            AppColors.themeColor.withOpacity(0.6),
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
-                          'App Development',
-                          style: AppTextStyles.montserratStyle(
-                              color: Colors.black87, fontSize: 20),
-                        ),
-                        Constants.sizedBox(height: 15.0),
-                        Text(
-                          'I had the opportunity to become one of the Android programmers for the New BTN Mobile Banking project. Work as a team to work on payment and purchase features. where the total menu has been successfully worked on and has released 22 menus for the payment feature and 6 menus for the purchase feature.Development is carried out based on sprints and tasks given by each team leader. Performing UI slicing work from Figma with the UI/UX Designer and coordinating with the BA regarding flow for making navigation, integrating with the BE (Back End) team, and fixing bugs with the help of a QA as a tester. ',
-                          style:
-                              AppTextStyles.normalStyle(color: Colors.black87),
-                          textAlign: TextAlign.center,
-                        ),
-                        Constants.sizedBox(height: 30.0),
-                        CircleAvatar(
-                          maxRadius: 25,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            AppAssets.share,
-                            width: 25,
-                            height: 25,
-                            fit: BoxFit.fill,
+                SizedBox(
+                  height: 500,
+                  width: 500,
+                  child: Visibility(
+                    visible: index == hoveredIndex,
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 600),
+                      transform: index == hoveredIndex ? onH0verEffect : null,
+                      curve: Curves.easeIn,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 16),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              AppColors.themeColor.withOpacity(1.0),
+                              AppColors.themeColor.withOpacity(0.9),
+                              AppColors.themeColor.withOpacity(0.8),
+                              AppColors.themeColor.withOpacity(0.6),
+                            ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'App Development',
+                            style: AppTextStyles.montserratStyle(
+                                color: Colors.black87, fontSize: 20),
                           ),
-                        )
-                      ],
+                          Constants.sizedBox(height: 15.0),
+                          Text(
+                            "Click to view on Google Play",
+                            style:
+                                AppTextStyles.normalStyle(color: Colors.black87),
+                            textAlign: TextAlign.center,
+                          ),
+                          Constants.sizedBox(height: 30.0),
+                          CircleAvatar(
+                            maxRadius: 25,
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              AppAssets.share,
+                              width: 25,
+                              height: 25,
+                              fit: BoxFit.fill,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -172,11 +178,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
       duration: const Duration(milliseconds: 1200),
       child: RichText(
         text: TextSpan(
-          text: 'Latest ',
+          // text: 'Latest ',
           style: AppTextStyles.headingStyles(fontSize: 30.0),
           children: [
             TextSpan(
-              text: 'Projects',
+              text: 'My Portofolio',
               style: AppTextStyles.headingStyles(
                   fontSize: 30, color: AppColors.robinEdgeBlue),
             )

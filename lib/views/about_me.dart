@@ -16,15 +16,15 @@ class AboutMe extends StatelessWidget {
     return HelperClass(
       mobile: Column(
         children: [
-          buildAboutMeContents(),
+          // buildAboutMeContents(),
           Constants.sizedBox(height: 35.0),
-          buildProfilePicture(),
+          buildAboutMeContents()
         ],
       ),
       tablet: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          buildProfilePicture(),
+          // buildProfilePicture(),
           Constants.sizedBox(width: 25.0),
           Expanded(child: buildAboutMeContents())
         ],

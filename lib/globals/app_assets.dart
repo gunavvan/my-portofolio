@@ -18,4 +18,6 @@ class AppAssets {
   static String java = 'assets/images/java.webp';
   static String kotlin = 'assets/images/kotlin.png';
   static String btn = 'assets/images/btn.png';
+  static String tribrata = 'assets/images/tribrata.png';
+  static String dnp = 'assets/images/dnp.png';
 }
